@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+
+{% block content %}
+
+
+
+<div class="container">
+    <div class="col-md-6 mx-auto shadow">
+        <h3 class="p-3">You are now Logged Out</h3>
+        <a href="{% url 'login' %}">Again login</a>
+    </div>
+</div>
+
+{% endblock content %}

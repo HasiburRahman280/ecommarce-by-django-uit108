@@ -1,0 +1,24 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="card shadow">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img src="{{ user.profile.image.url }}" alt="" style="width: 100%;">
+            </div>
+            <div class="col-12 col-md-8 my-auto">
+                <a class="btn btn-warning" href="{% url 'profile-update' %}">To change your profile</a>
+                <a class="btn btn-info" href="{% url 'password-change' %}">password-change</a> 
+                <h4>Username : {{ user.username }}</h4>
+                <p>Name : {{ user.first_name }} {{ user.last_name }}</p>
+                <p>Phone : {{ user.profile.phone }}</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
